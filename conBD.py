@@ -74,6 +74,7 @@ with con:
 	#verificamos numero de datos creados
 	cur.execute("SELECT count(*) from temperatura")
 	datos = cur.fetchone()[0]
+	#datos = cur.fetchone()
 
 	print("Cantidad de datos:{}".format(datos))
 	print("A continuación se muestra un ejemplo de los datos\n")
@@ -81,7 +82,7 @@ with con:
 	#Mostrar los 10 primeros registros
 	#cursor = con.execute("SELECT * FROM temperatura limit 10")
 
-	cur.execute("SELECT * FROM temperatura limit 10")
+	cur.execute("SELECT * FROM temperatura limit 100")
 	cursor = cur.fetchall()
 
 	print("#\tTimestamp\t\tTemperatura")
@@ -89,4 +90,5 @@ with con:
 	
 	for fila in cursor:
 		print(contador, "\t", fila[0], "\t", fila[1])
+		#print(fila)
 		contador = contador + 1
