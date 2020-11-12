@@ -38,7 +38,7 @@ with con:
 	print("N:",N, sep="\t", end=" ") 
 	
 	#Iteramos por cada valor de temperatura para aplicar la formula de varianza
-	cur.execute("SELECT temp FROM temperatura")
+	cur.execute("SELECT temp FROM temperatura ORDER BY temp")
 	cursor = cur.fetchall()
 	
 	varianza = 0
