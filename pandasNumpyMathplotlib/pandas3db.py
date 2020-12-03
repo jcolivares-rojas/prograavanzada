@@ -6,6 +6,6 @@ con = sqlite3.connect("mediciones.db")
 df = pd.read_sql_query("SELECT * from nvo_reg", con)
 
 # mostramos el resultado
-print(df.head())
+print(df.head(10))
 
 con.close()
