@@ -18,6 +18,7 @@ print(boston.keys())
 print('Características del dataset:')
 print(boston.DESCR)
 
+
 #Verifico la cantidad de datos que hay en los dataset
 print('Cantidad de datos:')
 print(boston.data.shape)
